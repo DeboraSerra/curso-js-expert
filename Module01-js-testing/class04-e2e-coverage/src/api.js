@@ -7,6 +7,9 @@ const DEFAUL_USER = {
 }
 
 const routes = {
+  '/contact:get': (req, res) => {
+    return res.end('contact us page')
+  },
   '/login:post': async (req, res) => {
     const { username, password } = JSON.parse(await once(req, "data"));
     if (username !== DEFAUL_USER.username || password !== DEFAUL_USER.password) {
