@@ -64,15 +64,15 @@ class MyDate {
     }).format(itens);
   }
   *[Symbol.iterator]() {
-    for (const item of this[kItems]){
-      yield item
+    for (const item of this[kItems]) {
+      yield item;
     }
   }
   async *[Symbol.asyncIterator]() {
-    const timeout = ms => new Promise(r => setTimeout(r, ms))
-    for (const item of this[kItems]){
-      await timeout(100)
-      yield item.toISOString()
+    const timeout = (ms) => new Promise((r) => setTimeout(r, ms));
+    for (const item of this[kItems]) {
+      await timeout(100);
+      yield item.toISOString();
     }
   }
   get [Symbol.toStringTag]() {
@@ -85,7 +85,7 @@ const expectedDates = [new Date(2020, 3, 1), new Date(2018, 2, 2)];
 
 // console.log(myDate[kItems])
 
-assert.deepStrictEqual(myDate[kItems], expectedDates)
+assert.deepStrictEqual(myDate[kItems], expectedDates);
 assert.deepStrictEqual(
   Object.prototype.toString.call(myDate),
   "[object WHAT?]"
@@ -95,15 +95,18 @@ assert.deepStrictEqual(
   String(myDate),
   "01 de abril de 2020 e 02 de março de 2018"
 );
-assert.deepStrictEqual([...myDate], expectedDates)
+assert.deepStrictEqual([...myDate], expectedDates);
 
 // ;(async () => {
 //   for await (const item of myDate) {
 //     console.log(item)
 //   }
 // })()
-
-;(async () => {
-  const dates = await Promise.all([...myDate])
-  assert.deepStrictEqual(dates, expectedDates)
-})()
+(async () => {
+  const dates = [];
+  for await (const item of myDate) {
+    dates.push(item);
+  }
+  const expectedDatesISO = expectedDates.map((date) => date.toISOString());
+  assert.deepStrictEqual(dates, expectedDatesISO);
+})();
