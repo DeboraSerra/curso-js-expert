@@ -1,12 +1,12 @@
-import chalk from "chalk";
-import chalkTable from "chalk-table";
-import DraftLog from "draftlog";
+"use strict";module.export({default:()=>TerminalController});var chalk;module.link("chalk",{default(v){chalk=v}},0);var chalkTable;module.link("chalk-table",{default(v){chalkTable=v}},1);var DraftLog;module.link("draftlog",{default(v){DraftLog=v}},2);var readline;module.link("readline",{default(v){readline=v}},3);var Person;module.link("./person.js",{default(v){Person=v}},4);
 
-import readline from "readline";
 
-import Person from "./person.js";
 
-export default class TerminalController {
+
+
+
+
+class TerminalController {
   constructor() {
     this.print = {};
     this.data = [];
@@ -31,7 +31,7 @@ export default class TerminalController {
 
   updateTable(item) {
     this.data.push(item)
-    this.print(chalkTable(this.getTableOptions(), this.data))
+    this.print(chalkTable(this.data))
   }
 
   question(msg = "") {
