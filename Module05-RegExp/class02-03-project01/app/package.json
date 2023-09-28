@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha test/*.test.js",
+    "test:dev": "npx mocha -w test/*.test.js",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "posttest": "npx nyc npx mocha test/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  }
+}
