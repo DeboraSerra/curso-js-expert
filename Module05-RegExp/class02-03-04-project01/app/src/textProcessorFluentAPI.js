@@ -2,6 +2,7 @@
 // como um pipeline, step by step e no fim, chama o build
 // MUITO similar ao padrão de projeto Builder
 
+const Person = require("./person");
 const { evaluateRegex } = require("./util");
 
 // a diferença é que aqui é sobre processos e não sobre objetos
@@ -39,6 +40,11 @@ class TextProcessorFluentAPI {
     const regex = evaluateRegex(/^\s+|\s+$|\n/g);
     this.#content = this.#content.map(line => line.map(item => item.replace(regex, "")));
     return this;
+  }
+
+  mapPerson() {
+    this.#content = this.#content.map(line => new Person(line));
+    return this
   }
 }
 
