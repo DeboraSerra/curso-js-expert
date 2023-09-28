@@ -1,0 +1,29 @@
+123.123.123-14
+321.123.345-20
+200.300.500.19
+
+/^\d{3}.\d{3}-\d\d{2}$/ -> cpf
+
+/[.-]/g -> tudo que é ponto ou traço
+
+-----------------------------------------------------------------
+
+de csv para json
+
+Wendel, Erick
+Gomes, Laila
+Johnson, José
+
+ctrl + F:
+  search: /^(\w+),\s(\w+)$/
+  replace: { firstName: '$2', lastName: '$1' }
+
+------------------------------------------------------------------
+de md para html
+O [text](link) faz palestras blá blá blá [text](link)
+
+texto texto texto [text](link)
+
+ctrl+F:
+  search: /\[(.*?)\]\(([http|https].*?)\)/
+  replace: <a href="$2">$1</a>
