@@ -1,0 +1,21 @@
+{
+  "name": "class01-behavioural-strategy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "knex": "^2.5.1",
+    "mongodb": "^6.1.0",
+    "pg": "^8.11.3"
+  }
+}
