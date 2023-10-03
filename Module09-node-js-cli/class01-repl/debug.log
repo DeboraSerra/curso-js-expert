@@ -1,0 +1,13 @@
+clearBreakpoint('index.mjs',13)
+list(100)
+r
+c
+sb(15)
+r
+sb(15)
+c
+exec salaryNet
+exec req
+exec salary
+exec discount
+exec netSalary({discount,salary})
