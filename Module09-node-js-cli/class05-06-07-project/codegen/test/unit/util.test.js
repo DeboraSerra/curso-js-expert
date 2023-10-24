@@ -33,4 +33,10 @@ describe("Util strings", () => {
     const result = Util.upperCaseFirstLetter(data);
     expect(result).toBe(expected);
   });
+  it('should delete empty spaces from strings', () => {
+    const data = ' '
+    const expected = ''
+    const result = Util.upperCaseFirstLetter(data)
+    expect(result).toBe(expected)
+  })
 });

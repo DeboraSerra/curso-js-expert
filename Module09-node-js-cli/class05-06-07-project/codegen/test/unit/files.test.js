@@ -7,7 +7,7 @@ import templates from "../../src/templates/index.js";
 describe("Layers - Files Structure", () => {
   const defaultLayers = ["service", "factory", "repository"];
   const config = {
-    mainPath: "./",
+    mainPath: ".",
     defaultMainFolder: "src",
     layers: defaultLayers,
     componentName: "test",
