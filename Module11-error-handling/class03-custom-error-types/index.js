@@ -18,6 +18,7 @@ async function handler(req, res) {
   for await (const data of req) {
     try {
       const hero = JSON.parse(data);
+      validateHero(hero);
       console.log({ hero });
       res.writeHead(statusCodes.OK);
     } catch (e) {
