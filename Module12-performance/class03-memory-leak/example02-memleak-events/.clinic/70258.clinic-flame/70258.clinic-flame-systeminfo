@@ -1,0 +1,29 @@
+{
+  "mainDirectory": "/home/debora/Documentos/projects/curso-js-expert/Module12-performance/class03-memory-leak/example02-memleak-events",
+  "pathSeparator": "/",
+  "nodeVersions": {
+    "node": "20.1.0",
+    "acorn": "8.8.2",
+    "ada": "2.3.0",
+    "ares": "1.19.0",
+    "brotli": "1.0.9",
+    "cldr": "43.0",
+    "icu": "73.1",
+    "llhttp": "8.1.0",
+    "modules": "115",
+    "napi": "8",
+    "nghttp2": "1.52.0",
+    "nghttp3": "0.7.0",
+    "ngtcp2": "0.8.1",
+    "openssl": "3.0.8+quic",
+    "simdutf": "3.2.8",
+    "tz": "2023c",
+    "undici": "5.22.0",
+    "unicode": "15.0",
+    "uv": "1.44.2",
+    "uvwasi": "0.0.16",
+    "v8": "11.3.244.8-node.6",
+    "zlib": "1.2.13"
+  },
+  "toolVersion": "13.0.0"
+}

@@ -21,10 +21,10 @@ export default class Cart {
       // 3a
       let newObj = {}
       keys.forEach((key) => {
-        if (!keys[key]) return;
-        newObj[key] = keys[key]
+        if (!product[key]) return;
+        newObj[key] = product[key]
       });
-      result.push(new Product(product));
+      result.push(new Product(newObj));
     }
     return result;
   }
