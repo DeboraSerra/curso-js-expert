@@ -1,0 +1,20 @@
+{
+  "name": "class05-worker-threads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "debserra",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "sharp": "^0.32.6"
+  },
+  "devDependencies": {
+    "autocannon": "^7.12.0"
+  }
+}
