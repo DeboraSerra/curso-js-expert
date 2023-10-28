@@ -1,0 +1,16 @@
+{
+  "name": "class04-cluster-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npx autocannon -c 100 -d 30 -p 10 http://localhost:3000"
+  },
+  "keywords": [],
+  "author": "debserra",
+  "license": "ISC",
+  "devDependencies": {
+    "autocannon": "^7.12.0"
+  }
+}
